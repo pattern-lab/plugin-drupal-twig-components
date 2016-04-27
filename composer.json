@@ -27,7 +27,7 @@
           { "tags/*": "_twig-components/tags/*" },
           { "tests/*": "_twig-components/tests/*" }
         ]
-      },
+      }
     }
   }
 }
