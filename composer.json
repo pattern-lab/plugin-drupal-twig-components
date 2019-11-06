@@ -18,8 +18,21 @@
     "wiki":           "http://patternlab.io/docs/",
     "source":         "https://github.com/pattern-lab/plugin-drupal-twig-components/releases"
   },
+  "autoload": {
+    "psr-0": {
+      "PatternLab\\PatternEngine\\Twig": "src/"
+    }
+  },
+  "require": {
+    "drupal/core-front-matter": "^8.8.0",
+    "pattern-lab/core": "^2.0.0",
+    "twig/twig":        "~1.0"
+  },
   "extra": {
     "patternlab": {
+      "config": {
+        "twigEnvironmentClass": "\\PatternLab\\PatternEngine\\Twig\\DrupalTwigEnvironment"
+      },
       "dist": {
         "sourceDir": [
           { "filters/*": "_twig-components/filters/*" },
