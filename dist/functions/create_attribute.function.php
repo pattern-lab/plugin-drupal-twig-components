@@ -1,11 +1,11 @@
 <?php
+/**
+ * @file
+ * Add "create_attribute" function for Pattern Lab.
+ */
 
-$function = new Twig_SimpleFunction(
-  'create_attribute',
-  function ($attributes = []) {
-    foreach ($attributes as $key => $value) {
-      print ' ' . $key . '="' . join(' ', $value) . '"';
-    }
-  },
-  array('is_safe' => array('html'))
-);
+use \Drupal\Core\Template\Attribute;
+
+$function = new Twig_SimpleFunction('create_attribute', function ($attributes = []) {
+  return new Attribute($attributes);
+});
